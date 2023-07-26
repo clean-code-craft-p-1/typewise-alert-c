@@ -1,6 +1,2 @@
-testchecker
-*.gcda
-*.gcno
-*.gcov
-*.info
-*.html
+build/
+*.vs*
