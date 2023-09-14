@@ -6,9 +6,9 @@ This repository has legacy code in it. Let's refactor to enable evolution withou
 
 ## About this repository
 
-The objective of the code is to monitor battery temperature and prevent damage:
+The objective of the code is to monitor equipment temperature and prevent damage. Think of an x-ray tube, for example.
 
-- Classify the temperature measurement as being too high or too low. This classification depends on the type of cooling. With active cooling, the battery can reach higher temperatures before taking action.
+- Classify the temperature measurement as being too high or too low. This classification depends on the type of cooling. With active cooling, the equipment can reach higher temperatures before taking action.
 - Transmit the classification to take action: When the system has a controller, send the classification to it. In the absence of a controller, send the classification via email. In this project, the transmission is 'simulated' by printing on the console.
 
 The [GitHub Actions](https://docs.github.com/en/actions) in this project implement several workflows:
@@ -16,7 +16,7 @@ The [GitHub Actions](https://docs.github.com/en/actions) in this project impleme
 - No Duplications: Fails on finding duplication of 3 lines or more. There are no duplications, so this passes.
 - Limit complexity: The limit per function is set at 3 and it's currently failing
 - Build and Run: Runs the tests. It's passing currently, but there are hardly any tests. You need to add more.
-- Enter Reflections: Replace the `_enter` in the **Reflections** section below, within this file. This workflow fails till you replace it with your impressions.
+- Enter Reflections: Replace the **enter** phrases in the **Reflections** section below, within this file. This workflow fails till you replace it with your impressions.
 
 As with any legacy, have a look at the code to understand it better.
 

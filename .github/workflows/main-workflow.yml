@@ -9,6 +9,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: install coverage tool
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y gcovr
     - name: setup cmake
       run: sudo apt install cmake
 
@@ -19,3 +23,13 @@ jobs:
       
     - name: run
       run: build/test_alert
+
+    - name: collect coverage
+      run: gcovr --gcov-exclude=".*test.*" -r . --html --html-details -o coverage.html --print-summary
+
+    - name: create coverage artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: coverage
+        path: ./*.html
+        retention-days: 21

@@ -33,10 +33,10 @@ BreachType classifyTemperatureBreach(
 }
 
 void checkAndAlert(
-    AlertTarget alertTarget, BatteryCharacter batteryChar, double temperatureInC) {
+    AlertTarget alertTarget, EquipmentCharacter characteristic, double temperatureInC) {
 
   BreachType breachType = classifyTemperatureBreach(
-    batteryChar.coolingType, temperatureInC
+    characteristic.coolingType, temperatureInC
   );
 
   switch(alertTarget) {

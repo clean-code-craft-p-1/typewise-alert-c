@@ -23,10 +23,10 @@ typedef enum {
 typedef struct {
   CoolingType coolingType;
   char brand[48];
-} BatteryCharacter;
+} EquipmentCharacter;
 
 void checkAndAlert(
-  AlertTarget alertTarget, BatteryCharacter batteryChar, double temperatureInC);
+  AlertTarget alertTarget, EquipmentCharacter characteristic, double temperatureInC);
 
 void sendToController(BreachType breachType);
 void sendToEmail(BreachType breachType);
